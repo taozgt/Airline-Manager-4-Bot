@@ -23,6 +23,8 @@ export class CampaignUtils {
             await this.page.getByRole('cell', { name: 'Eco-friendly Increases' }).click();
             await this.page.getByRole('button', { name: '$' }).click();
 
+        await GeneralUtils.sleep(1000);
+
         if(!isPaxExists) {
             await this.page.getByRole('button', { name: ' New campaign' }).click();
             await this.page.getByRole('cell', { name: 'Increase airline reputation' }).click();
